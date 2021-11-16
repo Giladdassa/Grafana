@@ -4,7 +4,7 @@
 
 sudo apt-get install -y apt-transport-https
 sudo apt-get install -y software-properties-common wget
-wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+sudo wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
 
 #Add this repository for stable releases:
 
@@ -25,11 +25,11 @@ sudo /bin/systemctl start grafana-server
 
 ########## Install Azure Data Explorer Plugin ############
 
-grafana-cli plugins install grafana-azure-data-explorer-datasource
+sudo grafana-cli plugins install grafana-azure-data-explorer-datasource
 
 ######### Enable Azure Managed Identity ##########
 
-managed_identity_enabled = true 
+sudo managed_identity_enabled = true 
 
 
 
